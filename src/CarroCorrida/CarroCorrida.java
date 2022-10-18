@@ -4,7 +4,7 @@ public class CarroCorrida {
 
     private int numeroCarro;
 
-    private String piloto;
+    private Piloto piloto;
 
     private float velocidadeMaxima;
 
@@ -14,7 +14,7 @@ public class CarroCorrida {
 
     public CarroCorrida(
             int numeroCarro,
-            String piloto,
+            Piloto piloto,
             float velocidadeMaxima,
             float velocidadeAtual,
             boolean ligar
@@ -30,7 +30,7 @@ public class CarroCorrida {
         return numeroCarro;
     }
 
-    public String getPiloto(){
+    public Piloto getPiloto(){
         return piloto;
     }
     public float getVelocidadeMaxima(){
@@ -46,7 +46,7 @@ public class CarroCorrida {
         this.numeroCarro = numeroCarro;
     }
 
-    public void setPiloto(String piloto){
+    public void setPiloto(Piloto piloto){
         this.piloto = piloto;
     }
 
@@ -58,16 +58,15 @@ public class CarroCorrida {
             System.out.println("Carro desligado");}
     }
 
-    public float setVelocidadeAtual(float velocidadeAtual){
-        if (velocidadeAtual == 0){
+    public void setVelocidadeAtual(float velocidadeAtual){
+        if (ligar == false){
             System.out.println("Carro desligado.");
-           return this.velocidadeAtual = velocidadeAtual;
-            } else if (velocidadeAtual>velocidadeMaxima){
+           } else if (velocidadeAtual>velocidadeMaxima){
            System.out.println("Velocidade máxima atingida, não é possível acelerar");
         }else {
-            return this.velocidadeAtual = velocidadeAtual;
+            this.velocidadeAtual = velocidadeAtual;
         }
-        return this.velocidadeAtual = velocidadeAtual;
+
     }
 
     @Override

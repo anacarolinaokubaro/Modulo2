@@ -4,8 +4,10 @@ public class PrincipalCorrida {
 
     public static void main(String[] args) {
 
-        Piloto AnaOkubaro = new Piloto("Ana Okubaro",30,"Feminino","Azul");
-        CarroCorrida Cobalt = new CarroCorrida(18, "AnaOkubaro", 230,0,false);
+        Piloto AnaOkubaro = new Piloto("Ana Okubaro",30,Sexo.FEMININO,"Azul");
+        CarroCorrida Cobalt = new CarroCorrida(18, AnaOkubaro, 230,0,false);
+
+        System.out.println(Cobalt);
 
         acelerar(50,Cobalt);
 

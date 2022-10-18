@@ -13,12 +13,12 @@ public class Piloto {
     public Piloto (
             String nome,
             int idade,
-            String sexo,
+            Sexo sexo,
             String equipe
     ){
         this.nome = nome;
         this.idade = idade;
-        this.sexo = Sexo.valueOf(sexo);
+        this.sexo = sexo;
         this.equipe = equipe;
     }
 
