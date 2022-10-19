@@ -11,7 +11,25 @@ public class PrincipalCorrida {
 
         acelerar(50,Cobalt);
 
+        frear(50,Cobalt);
 
+        Cobalt.ligar = true;
+
+        acelerar(270,Cobalt);
+
+        CarroCorrida Ferrari = new CarroCorrida(22, AnaOkubaro, 270,0,true);
+
+        acelerar(269,Ferrari);
+
+        System.out.println(Ferrari);
+
+        frear(200,Ferrari);
+
+        System.out.println(Ferrari);
+
+        parar(Ferrari);
+
+        System.out.println(Ferrari);
 
 
     }

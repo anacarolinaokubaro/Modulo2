@@ -55,15 +55,18 @@ public class CarroCorrida {
         if (ligar = true) {
             this.velocidadeMaxima = velocidadeMaxima;
         } else {
-            System.out.println("Carro desligado");}
+            System.out.println("\n\nCarro desligado");}
     }
 
     public void setVelocidadeAtual(float velocidadeAtual){
         if (ligar == false){
-            System.out.println("Carro desligado.");
+            System.out.println("\n\nCarro desligado.");
            } else if (velocidadeAtual>velocidadeMaxima){
-           System.out.println("Velocidade máxima atingida, não é possível acelerar");
-        }else {
+           System.out.println("\n\nVelocidade máxima atingida, não é possível acelerar");
+        } else if (velocidadeAtual == 0){
+            ligar=false;
+            this.velocidadeAtual= velocidadeAtual;
+        } else {
             this.velocidadeAtual = velocidadeAtual;
         }
 
@@ -71,7 +74,7 @@ public class CarroCorrida {
 
     @Override
     public String toString() {
-        return "CarroCorrida:\n" +
+        return "\n\nCarroCorrida:\n" +
                 "numeroCarro - " + numeroCarro +
                 "\npiloto - '" + piloto + '\'' +
                 "\nvelocidadeMaxima=" + velocidadeMaxima +
