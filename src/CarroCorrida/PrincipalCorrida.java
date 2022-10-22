@@ -13,7 +13,7 @@ public class PrincipalCorrida {
 
         frear(50,Cobalt);
 
-        Cobalt.ligar = true;
+        ligarCarro(Cobalt);
 
         acelerar(270,Cobalt);
 
@@ -52,6 +52,12 @@ public class PrincipalCorrida {
             CarroCorrida.setVelocidadeAtual(velocidadeParar);
         }
 
+        public static void ligarCarro (CarroCorrida CarroCorrida){
+        boolean ligar = CarroCorrida.isLigar();
+        ligar = true;
+            CarroCorrida.setLigar(ligar);
+
+        }
 
 
 }

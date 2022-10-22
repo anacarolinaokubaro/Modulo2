@@ -10,7 +10,7 @@ public class CarroCorrida {
 
     private float velocidadeAtual;
 
-    public boolean ligar;
+    private boolean ligar;
 
     public CarroCorrida(
             int numeroCarro,
@@ -50,6 +50,13 @@ public class CarroCorrida {
         this.piloto = piloto;
     }
 
+    public boolean isLigar() {
+        return ligar;
+    }
+
+    public void setLigar(boolean ligar) {
+        this.ligar = ligar;
+    }
 
     public void setVelocidadeMaxima(float velocidadeMaxima){
         if (ligar = true) {
