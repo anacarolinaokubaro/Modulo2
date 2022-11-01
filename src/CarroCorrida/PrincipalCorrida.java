@@ -36,26 +36,26 @@ public class PrincipalCorrida {
 
 
 
-        public static void acelerar (float velocidade, CarroCorrida CarroCorrida){
-        float velocidadeADD = CarroCorrida.getVelocidadeAtual() + velocidade;
-            CarroCorrida.setVelocidadeAtual(velocidadeADD);
+        public static void acelerar (float velocidade, CarroCorrida carroCorrida){
+        float velocidadeADD = carroCorrida.getVelocidadeAtual() + velocidade;
+        carroCorrida.setVelocidadeAtual(velocidadeADD);
         }
 
 
-        public static void frear (float velocidade, CarroCorrida CarroCorrida){
-        float velocidadeADD = CarroCorrida.getVelocidadeAtual() - velocidade;
-        CarroCorrida.setVelocidadeAtual(velocidadeADD);
+        public static void frear (float velocidade, CarroCorrida carroCorrida){
+        float velocidadeADD = carroCorrida.getVelocidadeAtual() - velocidade;
+        carroCorrida.setVelocidadeAtual(velocidadeADD);
     }
 
-        public static void parar (CarroCorrida CarroCorrida){
-        float velocidadeParar =  CarroCorrida.getVelocidadeAtual() - CarroCorrida.getVelocidadeAtual();
-            CarroCorrida.setVelocidadeAtual(velocidadeParar);
+        public static void parar (CarroCorrida carroCorrida){
+        float velocidadeParar =  carroCorrida.getVelocidadeAtual() - carroCorrida.getVelocidadeAtual();
+        carroCorrida.setVelocidadeAtual(velocidadeParar);
         }
 
-        public static void ligarCarro (CarroCorrida CarroCorrida){
-        boolean ligar = CarroCorrida.isLigar();
+        public static void ligarCarro (CarroCorrida carroCorrida){
+        boolean ligar = carroCorrida.isLigar();
         ligar = true;
-            CarroCorrida.setLigar(ligar);
+            carroCorrida.setLigar(ligar);
 
         }
 
